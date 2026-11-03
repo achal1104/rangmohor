@@ -4,7 +4,7 @@ import { PageHead, ExploreBanner, CallBox } from '../components.jsx'
 export default function About() {
   return (
     <>
-      <PageHead crumbs={[['Home', '/'], ['About']]} eyebrow="About" title="Why RangMohor" text="Made to be loved." />
+      <PageHead crumbs={[['Home', '/'], ['About']]} eyebrow="About" title="Why Rang mohor" text="Made to be loved." />
       <section className="why">
         <div className="why-l">
           <p>We celebrate the skill and creativity behind handmade products.</p>

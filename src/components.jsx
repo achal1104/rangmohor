@@ -38,8 +38,8 @@
 
 // export function Logo() {
 //   return (
-//     <Link to="/" className="logo" aria-label="RangMohor – home">
-//       <img className="logo-img" src="logo.png" alt="RangMohor" width="465" height="216" />
+//     <Link to="/" className="logo" aria-label="rang mohor – home">
+//       <img className="logo-img" src="logo.png" alt="rang mohor" width="465" height="216" />
 //     </Link>
 //   )
 // }
@@ -89,10 +89,10 @@
 //           <div className="sub-row"><input placeholder="Enter your email" aria-label="Email" /><button className="btn gold sm">Subscribe</button></div>
 //         </div>
 //         <div><h4>Shop</h4>{CATEGORIES.map(c => <Link key={c.slug} to={'/shop/' + c.slug}>{c.title}</Link>)}</div>
-//         <div><h4>RangMohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
+//         <div><h4>rang mohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
 //         <div><h4>Contact</h4><p className="sm">Call / WhatsApp<br /><a href={STORE.phoneHref}>{STORE.phone}</a><br /><a href={'mailto:' + STORE.email}>{STORE.email}</a></p><small>{STORE.address}</small></div>
 //       </div>
-//       <div className="f-bot"><span>© {new Date().getFullYear()} RangMohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
+//       <div className="f-bot"><span>© {new Date().getFullYear()} rang mohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
 //     </footer>
 //   )
 // }
@@ -144,8 +144,8 @@
 //     <section className="explore"><Img src={HERO} remote={HERO_REMOTE} />
 //       <div className="ex-in">
 //         <h2>Celebrate · Gift · Decorate · Cherish</h2>
-//         <p>A little more meaning in every purchase. At RangMohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
-//         <Link className="btn gold" to="/shop">Explore RangMohor</Link>
+//         <p>A little more meaning in every purchase. At rang mohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
+//         <Link className="btn gold" to="/shop">Explore rang mohor</Link>
 //       </div>
 //     </section>
 //   )
@@ -231,8 +231,8 @@ export function LogoMark({ size = 40 }) {
 
 export function Logo() {
   return (
-    <Link to="/" className="logo" aria-label="RangMohor – home">
-      <img className="logo-img" src="logo.png" alt="RangMohor" width="465" height="216" />
+    <Link to="/" className="logo" aria-label="rang mohor – home">
+      <img className="logo-img" src="logo.png" alt="rang mohor" width="465" height="216" />
     </Link>
   )
 }
@@ -282,10 +282,10 @@ export function Footer() {
           <div className="sub-row"><input placeholder="Enter your email" aria-label="Email" /><button className="btn gold sm">Subscribe</button></div>
         </div>
         <div><h4>Shop</h4>{CATEGORIES.map(c => <Link key={c.slug} to={'/shop/' + c.slug}>{c.title}</Link>)}</div>
-        <div><h4>RangMohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
+        <div><h4>rang mohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
         <div><h4>Contact</h4><p className="sm">Call / WhatsApp<br /><a href={STORE.phoneHref}>{STORE.phone}</a><br /><a href={'mailto:' + STORE.email}>{STORE.email}</a></p><small>{STORE.address}</small></div>
       </div>
-      <div className="f-bot"><span>© {new Date().getFullYear()} RangMohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
+      <div className="f-bot"><span>© {new Date().getFullYear()} rang mohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
     </footer>
   )
 }
@@ -337,8 +337,8 @@ export function ExploreBanner() {
     <section className="explore"><Img src={HERO} remote={HERO_REMOTE} />
       <div className="ex-in">
         <h2>Celebrate · Gift · Decorate · Cherish</h2>
-        <p>A little more meaning in every purchase. At RangMohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
-        <Link className="btn gold" to="/shop">Explore RangMohor</Link>
+        <p>A little more meaning in every purchase. At rang mohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
+        <Link className="btn gold" to="/shop">Explore rang mohor</Link>
       </div>
     </section>
   )

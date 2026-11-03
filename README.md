@@ -1,4 +1,4 @@
-# RangMohor – Handcrafted gifts, wedding products & home decor (React + Vite)
+# rang mohor – Handcrafted gifts, wedding products & home decor (React + Vite)
 
     npm install
     npm run dev      # local preview
@@ -8,7 +8,7 @@
 - `/#/`                      Home
 - `/#/shop`                  Shop – all categories + budget filter
 - `/#/shop/<category>`       indian-wedding-products, handcrafted-bags, home-decor, kitchen-dining-essentials, gifting, bestsellers
-- `/#/about`                 About / Why RangMohor
+- `/#/about`                 About / Why rang mohor
 - `/#/store`                 Our Store + contact
 
 ## Where to edit

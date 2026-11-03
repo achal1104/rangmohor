@@ -12,12 +12,12 @@
 
 // function resolve(path) {
 //   const [a, b] = path.split('/').filter(Boolean)
-//   if (!a) return { el: <Home />, title: 'RangMohor | Handcrafted gifts, wedding products & home decor' }
-//   if (a === 'about') return { el: <About />, title: 'About | RangMohor' }
-//   if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | RangMohor' }
-//   if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | RangMohor' }
-//   if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | RangMohor' }
-//   return { el: <NotFound />, title: 'Page not found | RangMohor' }
+//   if (!a) return { el: <Home />, title: 'rang mohor | Handcrafted gifts, wedding products & home decor' }
+//   if (a === 'about') return { el: <About />, title: 'About | rang mohor' }
+//   if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | rang mohor' }
+//   if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | rang mohor' }
+//   if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | rang mohor' }
+//   return { el: <NotFound />, title: 'Page not found | rang mohor' }
 // }
 
 // export default function App() {
@@ -59,7 +59,7 @@ import Store from './pages/Store.jsx'
 import Cart from './pages/Cart.jsx'
 import NotFound from './pages/NotFound.jsx'
 
-const CART_KEY = 'rangmohor-cart'
+const CART_KEY = 'rang mohor-cart'
 
 // cart item shape: { n: 'Product name', qty: 2, p?: customPrice }
 const loadCart = () => {
@@ -71,13 +71,13 @@ const loadCart = () => {
 
 function resolve(path) {
   const [a, b] = path.split('/').filter(Boolean)
-  if (!a) return { el: <Home />, title: 'RangMohor | Handcrafted gifts, wedding products & home decor' }
-  if (a === 'about') return { el: <About />, title: 'About | RangMohor' }
-  if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | RangMohor' }
-  if (a === 'cart') return { el: <Cart />, title: 'Your Cart | RangMohor' }
-  if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | RangMohor' }
-  if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | RangMohor' }
-  return { el: <NotFound />, title: 'Page not found | RangMohor' }
+  if (!a) return { el: <Home />, title: 'rang mohor | Handcrafted gifts, wedding products & home decor' }
+  if (a === 'about') return { el: <About />, title: 'About | rang mohor' }
+  if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | rang mohor' }
+  if (a === 'cart') return { el: <Cart />, title: 'Your Cart | rang mohor' }
+  if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | rang mohor' }
+  if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | rang mohor' }
+  return { el: <NotFound />, title: 'Page not found | rang mohor' }
 }
 
 export default function App() {

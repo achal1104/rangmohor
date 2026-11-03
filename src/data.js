@@ -36,7 +36,7 @@ export const STORE = {
   phone: '75883 78883',
   phoneHref: 'tel:+917588378883',
   whatsapp: 'https://wa.me/917588378883',
-  email: 'Rangmohor25@gmail.com',
+  email: 'rang mohor25@gmail.com',
 }
 
 // ---------- Shop categories (from the "Shop Our Collection" notebook page) ----------
