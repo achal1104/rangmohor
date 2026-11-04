@@ -178,3 +178,7 @@ footer a.wa-fab{margin:0}
 }
 /* category card images: show lower part (flames) */
 .occ-img .ph{background-position:center 85%;object-position:center 85%}
+/* ---- second product photo fades in on hover (photos come from the admin panel) ---- */
+.card-img .ph-alt{opacity:0;transition:opacity .6s var(--ease),transform 1.1s var(--ease)}
+.card:hover .card-img .ph-alt{opacity:1}
+.btn[disabled]{opacity:.55;cursor:not-allowed;filter:grayscale(.3)}

@@ -85,9 +85,9 @@ export function Words({ text }) {
 }
 
 export function Marquee() {
-  const row = ['Wedding essentials', 'Handcrafted bags', 'Home decor', 'Kitchen & dining', 'Gifting', 'Bestsellers']
+  const row = ['Wedding essentials', 'Home decor', 'Handcrafted bags', 'Gifting']
     .map(t => <span key={t}>{t}<i>✦</i></span>)
-  return <div className="marq" aria-hidden="true"><div>{row}{row}</div></div>
+  return <div className="marq" aria-hidden="true"><div>{row}{row}{row}</div></div>
 }
 
 

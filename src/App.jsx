@@ -1,55 +1,7 @@
-// import { useEffect, useRef, useState } from 'react'
-// import { usePath } from './router.jsx'
-// import { Header, Footer, ShopCtx } from './components.jsx'
-// import { catBySlug } from './data.js'
-// import { Preloader, ScrollFx, Toast, useRevealAll } from './fx.jsx'
-// import Home from './pages/Home.jsx'
-// import About from './pages/About.jsx'
-// import Shop from './pages/Shop.jsx'
-// import Category from './pages/Category.jsx'
-// import Store from './pages/Store.jsx'
-// import NotFound from './pages/NotFound.jsx'
-
-// function resolve(path) {
-//   const [a, b] = path.split('/').filter(Boolean)
-//   if (!a) return { el: <Home />, title: 'rang mohor | Handcrafted gifts, wedding products & home decor' }
-//   if (a === 'about') return { el: <About />, title: 'About | rang mohor' }
-//   if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | rang mohor' }
-//   if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | rang mohor' }
-//   if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | rang mohor' }
-//   return { el: <NotFound />, title: 'Page not found | rang mohor' }
-// }
-
-// export default function App() {
-//   const path = usePath()
-//   const [bag, setBag] = useState([])
-//   const [liked, setLiked] = useState({})
-//   const [toast, setToast] = useState('')
-//   const tt = useRef()
-//   const ctx = {
-//     bag, add: n => { setBag(b => [...b, n]); setToast(n + ' added to your bag'); clearTimeout(tt.current); tt.current = setTimeout(() => setToast(''), 2400) },
-//     liked, toggleLike: n => setLiked(l => ({ ...l, [n]: !l[n] })),
-//     likedCount: Object.values(liked).filter(Boolean).length,
-//   }
-//   const { el, title } = resolve(path)
-//   useEffect(() => { document.title = title }, [title])
-//   useRevealAll(path)
-//   return (
-//     <ShopCtx.Provider value={ctx}>
-//       <Preloader />
-//       <ScrollFx />
-//       <Toast msg={toast} />
-//       <Header path={path} />
-//       <main key={path}>{el}</main>
-//       <Footer />
-//     </ShopCtx.Provider>
-//   )
-// }
-
 import { useEffect, useRef, useState } from 'react'
 import { usePath } from './router.jsx'
 import { Header, Footer, ShopCtx } from './components.jsx'
-import { catBySlug, PRODUCTS } from './data.js'
+import { catBySlug, PRODUCTS, loadCatalog } from './data.js'
 import { Preloader, ScrollFx, Toast, useRevealAll } from './fx.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -59,7 +11,7 @@ import Store from './pages/Store.jsx'
 import Cart from './pages/Cart.jsx'
 import NotFound from './pages/NotFound.jsx'
 
-const CART_KEY = 'rang mohor-cart'
+const CART_KEY = 'rangmohor-cart'
 
 // cart item shape: { n: 'Product name', qty: 2, p?: customPrice }
 const loadCart = () => {
@@ -71,13 +23,13 @@ const loadCart = () => {
 
 function resolve(path) {
   const [a, b] = path.split('/').filter(Boolean)
-  if (!a) return { el: <Home />, title: 'rang mohor | Handcrafted gifts, wedding products & home decor' }
-  if (a === 'about') return { el: <About />, title: 'About | rang mohor' }
-  if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | rang mohor' }
-  if (a === 'cart') return { el: <Cart />, title: 'Your Cart | rang mohor' }
-  if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | rang mohor' }
-  if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | rang mohor' }
-  return { el: <NotFound />, title: 'Page not found | rang mohor' }
+  if (!a) return { el: <Home />, title: 'RangMohor | Handcrafted gifts, wedding products & home decor' }
+  if (a === 'about') return { el: <About />, title: 'About | RangMohor' }
+  if (a === 'store' || a === 'contact') return { el: <Store />, title: 'Our Store | RangMohor' }
+  if (a === 'cart') return { el: <Cart />, title: 'Your Cart | RangMohor' }
+  if (a === 'shop' && !b) return { el: <Shop />, title: 'Shop Our Collection | RangMohor' }
+  if (a === 'shop' && catBySlug(b)) return { el: <Category slug={b} />, title: catBySlug(b).title + ' | RangMohor' }
+  return { el: <NotFound />, title: 'Page not found | RangMohor' }
 }
 
 export default function App() {
@@ -86,6 +38,21 @@ export default function App() {
   const [liked, setLiked] = useState({})
   const [toast, setToast] = useState('')
   const tt = useRef()
+
+  // products / categories / contact details come from the admin panel (Spring Boot backend)
+  const [catalog, setCatalog] = useState({ v: 0, ready: false })
+  useEffect(() => {
+    let alive = true, last = 0
+    const refresh = () => {
+      last = Date.now()
+      loadCatalog().then(ok => { if (alive) setCatalog(c => ({ v: c.v + 1, ready: c.ready || ok, tried: true })) })
+    }
+    refresh()
+    // pick up new products when the visitor comes back to the tab
+    const onVis = () => { if (document.visibilityState === 'visible' && Date.now() - last > 30000) refresh() }
+    document.addEventListener('visibilitychange', onVis)
+    return () => { alive = false; document.removeEventListener('visibilitychange', onVis) }
+  }, [])
 
   // keep cart saved, so it stays after refresh
   useEffect(() => {
@@ -98,16 +65,19 @@ export default function App() {
     tt.current = setTimeout(() => setToast(''), 2400)
   }
 
-  // bag items with price + product details attached
-  const items = bag.map(i => {
-    const prod = PRODUCTS.find(p => p.n === i.n)
-    return { ...i, prod, price: i.p ?? prod?.p ?? 0 }
-  })
+  // bag items with price + product details attached (items whose product was removed in the admin are hidden)
+  const items = bag
+    .map(i => {
+      const prod = PRODUCTS.find(p => p.n === i.n)
+      return { ...i, prod, price: prod?.p ?? i.p ?? 0 }
+    })
+    .filter(i => !catalog.ready || i.prod || i.p != null)
 
   const ctx = {
     bag,
     items,
-    count: bag.reduce((s, i) => s + i.qty, 0),
+    loading: !catalog.tried,
+    count: items.reduce((s, i) => s + i.qty, 0),
     total: items.reduce((s, i) => s + i.price * i.qty, 0),
     add: (n, extra) => {
       setBag(b => b.some(i => i.n === n)
@@ -126,7 +96,7 @@ export default function App() {
 
   const { el, title } = resolve(path)
   useEffect(() => { document.title = title }, [title])
-  useRevealAll(path)
+  useRevealAll(path + ':' + catalog.v)
   return (
     <ShopCtx.Provider value={ctx}>
       <Preloader />
