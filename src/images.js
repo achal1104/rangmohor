@@ -22,4 +22,5 @@ export const RETURN_GIFT_PINK = img('1768776182889-607915c299a6')    // pink gif
 export const RETURN_GIFT_SETTING = img('1768776182974-312627c06945') // table setting with pink favors
 export const RETURN_GIFT_JARS = img('1780586377700-632ff2c5c111')    // small jars with lace ribbons
 export const RETURN_GIFT_DESSERT = img('1780586382169-995de14645df') // white desserts with bows on tiered stand
+export const GIFT_BOXES = img('1549465220-1a629be7c53a')             // gift boxes with gold ribbon
 

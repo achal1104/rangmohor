@@ -169,10 +169,7 @@ export function CallBox() {
   )
 }
 
-// Gift hamper designer — तात्पुरते comment केले आहे
-export function Studio() { return null }
-
-/*
+// ---------- Gift hamper designer (shown on the Gifting page) ----------
 export function Studio() {
   const { add } = useShop()
   const ribbons = { 'Champagne Gold': '#b98f3f', 'Ivory Silk': '#efe6d6', 'Palace Sage': '#9bab8c' }
@@ -200,4 +197,3 @@ export function Studio() {
     </section>
   )
 }
-*/
