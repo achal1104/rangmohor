@@ -93,7 +93,7 @@ export function Footer() {
         </div>
         <div><h4>Shop</h4>{CATEGORIES.map(c => <Link key={c.slug} to={'/shop/' + c.slug}>{c.title}</Link>)}</div>
         <div><h4>Rang Mohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
-        <div><h4>Contact</h4><p className="sm">Call / WhatsApp<br /><a href={STORE.phoneHref}>{STORE.phone}</a><br /><a href={'mailto:' + STORE.email}>{STORE.email}</a></p><small>{STORE.address}</small></div>
+        <div><h4>Contact</h4><p className="sm"> WhatsApp<br /><a href={STORE.phoneHref}>{STORE.phone}</a><br /><a href={'mailto:' + STORE.email}>{STORE.email}</a></p><small>{STORE.address}</small></div>
       </div>
       <div className="f-bot"><span>© {new Date().getFullYear()} Rang Mohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
     </footer>
