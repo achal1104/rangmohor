@@ -614,3 +614,163 @@ section.store.store-photo-layout .store-info .store-text p{max-width:none}
   .hero .hero-r{order:2;width:100%;margin-top:8px}
   .hero-frame{width:min(520px,92%);margin-inline:auto}
 }
+/* ---------- Home hero: mobile text alignment fix ---------- */
+.hero{grid-template-columns:minmax(0,1fr)}
+@media(min-width:981px){.hero{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}
+.hero .hero-l,.hero .hero-r{min-width:0;max-width:100%}
+
+.hero h1{line-height:1.15}
+.hero h1 .w{padding:0 .05em .22em 0;margin-right:.2em}
+
+@media(max-width:980px){
+  .hero{text-align:center;padding-inline:max(var(--pad,16px),5vw)}
+  .hero .kicker{justify-content:center}
+  .hero h1{font-size:clamp(32px,9vw,48px);line-height:1.18;margin-bottom:22px}
+  .hero p{margin-inline:auto;max-width:34em;font-size:15px;line-height:1.65;margin-bottom:24px}
+  .hero .btns{justify-content:center}
+  .hero .stats{margin-inline:auto}
+}
+   @media (max-width:980px){
+     .hero, .hero .hero-l{text-align:center !important}
+     .hero h1{text-align:center !important;overflow:visible !important}
+     .hero p{margin-inline:auto !important;text-align:center !important}
+     .hero .kicker{justify-content:center !important}
+     .hero h1 em{display:inline-block;padding:0 .1em .15em}
+   }/* ===== HERO CENTER ALIGN (mobile + tablet) - keep at very end ===== */
+@media (max-width:980px){
+  .hero{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    justify-items:center;
+    text-align:center !important;
+  }
+  .hero .hero-l,
+  .hero .hero-r{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    text-align:center !important;
+  }
+
+  .hero .kicker{justify-content:center !important}
+
+  .hero h1{
+    text-align:center !important;
+    font-size:clamp(30px,9vw,46px) !important;
+    line-height:1.2 !important;
+    overflow:visible !important;
+    margin-inline:auto;
+  }
+  .hero h1 .w,
+  .hero h1 em{
+    display:inline-block;
+    padding:0 .08em .18em;
+    overflow:visible !important;
+  }
+
+  .hero p{
+    text-align:center !important;
+    margin-inline:auto !important;
+    max-width:34em;
+  }
+
+  .hero .btns{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    width:100%;
+  }
+  .hero .btns .btn{
+    width:100%;
+    text-align:center;
+    justify-content:center;
+  }
+
+  /* phone वर अक्षरं कापली जाणं थांबवण्यासाठी */
+  .hero h1, .hero h1 *, .hero p, .hero .btns, .hero .btns *{
+    animation:none !important;
+    transition:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    clip-path:none !important;
+    -webkit-mask:none !important;
+    mask:none !important;
+  }
+}
+
+/* WhatsApp button ने content झाकू नये */
+@media (max-width:600px){
+  .hero{padding-bottom:90px}
+}
+/* ===== HERO LEFT ALIGN (mobile + tablet) - keep at very end ===== */
+@media (max-width:980px){
+  .hero{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    text-align:left !important;
+    justify-items:stretch;
+  }
+  .hero .hero-l,
+  .hero .hero-r{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    text-align:left !important;
+  }
+
+  .hero .kicker{justify-content:flex-start !important}
+
+  .hero h1{
+    text-align:left !important;
+    font-size:clamp(38px,11vw,54px) !important;
+    line-height:1.18 !important;
+    margin-inline:0 !important;
+    overflow:visible !important;
+  }
+  .hero h1 .w,
+  .hero h1 em{
+    display:inline-block;
+    padding:0 .08em .18em;
+    overflow:visible !important;
+  }
+
+  .hero p{
+    text-align:left !important;
+    margin-inline:0 !important;
+    max-width:none;
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  .hero .btns{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    width:100%;
+  }
+  .hero .btns .btn{
+    width:100%;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero .stats{margin-inline:0 !important}
+
+  /* अक्षरं कापली जाऊ नयेत */
+  .hero h1, .hero h1 *, .hero p, .hero .btns, .hero .btns *{
+    animation:none !important;
+    transition:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    clip-path:none !important;
+    -webkit-mask:none !important;
+    mask:none !important;
+  }
+}
+
+/* WhatsApp button ने content झाकू नये */
+@media (max-width:600px){
+  .hero{padding-bottom:90px}
+}
