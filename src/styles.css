@@ -608,3 +608,9 @@ section.store.store-photo-layout .store-info .store-text p{max-width:none}
   section.store.store-photo-layout .store-photo{width:min(440px,92%);margin-inline:auto}
   section.store.store-photo-layout .store-info .store-text{text-align:center}
 }
+/* Home hero: mobile/tablet var text pahile, image nantar */
+@media(max-width:980px){
+  .hero .hero-l{order:1}
+  .hero .hero-r{order:2;width:100%;margin-top:8px}
+  .hero-frame{width:min(520px,92%);margin-inline:auto}
+}
