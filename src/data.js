@@ -25,7 +25,7 @@ const LOOK = {
   'wedding-essentials': { e: '💍', c: '#f0c27b,#c8872f', art: 'kalash', stock: I.DIYA },
   'home-decor': { e: '🏺', c: '#e9d5b8,#b98a4e', art: 'elephant', stock: I.GOLD_FIGURINE },
   'handcrafted-bags': { e: '👜', c: '#e8b4a0,#b5523b', art: 'potli', stock: U('1777283316185-9eff9eac098c') },
-  'gifting': { e: '🎁', c: '#f3e6cf,#cfae7e', art: 'giftbox', stock: I.GIFT_BOXES },
+  // 'gifting': { e: '🎁', c: '#f3e6cf,#cfae7e', art: 'giftbox', stock: I.GIFT_BOXES },
 }
 const ORDER = ['wedding-essentials', 'home-decor', 'handcrafted-bags', 'gifting']
 
@@ -33,7 +33,7 @@ const FALLBACK = [
   { slug: 'wedding-essentials', title: 'Wedding Essentials', tagline: 'Beautiful details for beautiful celebrations.' },
   { slug: 'home-decor', title: 'Home Decor', tagline: 'Add warmth, colour and character to your space.' },
   { slug: 'handcrafted-bags', title: 'Handcrafted Bags', tagline: 'Unique designs made for everyday style.' },
-  { slug: 'gifting', title: 'Gifting', tagline: 'Gifts that feel personal, meaningful.' },
+  // { slug: 'gifting', title: 'Gifting', tagline: 'Gifts that feel personal, meaningful.' },
 ]
 
 const makeCategory = ({ slug, title, tagline, image, id }) => {

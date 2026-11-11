@@ -169,7 +169,10 @@ export function CallBox() {
   )
 }
 
-// Gift hamper designer (shown on the Gifting page)
+// Gift hamper designer — तात्पुरते comment केले आहे
+export function Studio() { return null }
+
+/*
 export function Studio() {
   const { add } = useShop()
   const ribbons = { 'Champagne Gold': '#b98f3f', 'Ivory Silk': '#efe6d6', 'Palace Sage': '#9bab8c' }
@@ -192,8 +195,9 @@ export function Studio() {
       </div>
       <div className="preview">
         <div className="gift" style={{ '--rb': ribbons[ribbon] }}><div className="rv" /><div className="rh" /><div className="seal"><span>👑</span><b>{mono || 'R & M'}</b></div></div>
-        <div className="insert"><small>Parchment insert</small><p>“{note}”</p><small className="ft">Hand-assembled with care</small></div>
+        <div className="insert"><small>Parchment insert</small><p>"{note}"</p><small className="ft">Hand-assembled with care</small></div>
       </div>
     </section>
   )
 }
+*/
