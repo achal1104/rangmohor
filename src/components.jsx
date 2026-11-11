@@ -55,7 +55,7 @@ export function Header({ path }) {
   const on = (p) => (p === '/' ? path === '/' : path === p || path.startsWith(p + '/')) ? 'on' : ''
   return (
     <>
-      <div className="topbar">Handcrafted with tradition. Chosen with love. Call or WhatsApp {STORE.phone}</div>
+      <div className="topbar">Handcrafted with tradition. Chosen with love. WhatsApp {STORE.phone}</div>
       <header className="nav">
         <Logo />
         <button className={'burger' + (menu ? ' open' : '')} aria-label="Menu" aria-expanded={menu} onClick={() => setMenu(m => !m)}><span /><span /><span /></button>
