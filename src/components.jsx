@@ -41,8 +41,8 @@ export function LogoMark({ size = 40 }) {
 
 export function Logo() {
   return (
-    <Link to="/" className="logo" aria-label="RangMohor – home">
-      <img className="logo-img" src="logo.png" alt="RangMohor" width="465" height="216" />
+    <Link to="/" className="logo" aria-label="Rang Mohor – home">
+      <img className="logo-img" src="logo.png" alt="Rang Mohor" width="465" height="216" />
     </Link>
   )
 }
@@ -92,10 +92,10 @@ export function Footer() {
           <div className="sub-row"><input placeholder="Enter your email" aria-label="Email" /><button className="btn gold sm">Subscribe</button></div>
         </div>
         <div><h4>Shop</h4>{CATEGORIES.map(c => <Link key={c.slug} to={'/shop/' + c.slug}>{c.title}</Link>)}</div>
-        <div><h4>RangMohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
+        <div><h4>Rang Mohor</h4><Link to="/">Home</Link><Link to="/about">About</Link><Link to="/store">Our Store</Link></div>
         <div><h4>Contact</h4><p className="sm">Call / WhatsApp<br /><a href={STORE.phoneHref}>{STORE.phone}</a><br /><a href={'mailto:' + STORE.email}>{STORE.email}</a></p><small>{STORE.address}</small></div>
       </div>
-      <div className="f-bot"><span>© {new Date().getFullYear()} RangMohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
+      <div className="f-bot"><span>© {new Date().getFullYear()} Rang Mohor. All rights reserved.</span><span>Made with tradition. Chosen with love.</span></div>
     </footer>
   )
 }
@@ -148,8 +148,8 @@ export function ExploreBanner() {
     <section className="explore"><Img src={HERO} remote={HERO_REMOTE} />
       <div className="ex-in">
         <h2>Celebrate · Gift · Decorate · Cherish</h2>
-        <p>A little more meaning in every purchase. At RangMohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
-        <Link className="btn gold" to="/shop">Explore RangMohor</Link>
+        <p>A little more meaning in every purchase. At Rang Mohor, we want shopping to feel personal. Whether you are preparing for a celebration, refreshing your home, searching for the perfect gift or simply treating yourself — we hope you find something that speaks to you.</p>
+        <Link className="btn gold" to="/shop">Explore Rang Mohor</Link>
       </div>
     </section>
   )
@@ -157,12 +157,15 @@ export function ExploreBanner() {
 
 export function CallBox() {
   return (
-    <section className="consult"><div className="consult-box">
-      <div><small className="eyebrow l">Custom orders</small><h2>Planning a wedding or special occasion?</h2>
-        <p>Call or message us for wedding gifting, return gifts and custom handcrafted pieces made just for you.</p>
-        <div className="btns"><a className="btn brown" href={STORE.phoneHref}>Call Us Now</a><a className="btn white" href={STORE.whatsapp}>WhatsApp us</a><span className="phone">📞 {STORE.phone}</span></div></div>
-      <div className="mini">{[['💍', 'Wedding gifting'], ['🎁', 'Return gifts'], ['✨', 'Custom handcrafted pieces'], ['🏠', 'Home & kitchen']].map(([i, t]) => <div key={t}><span>{i}</span><b>{t}</b></div>)}</div>
-    </div></section>
+    <section className="consult">
+      <div className="consult-box">
+        <div className="mini">
+          {[['💍', 'Wedding gifting'], ['🎁', 'Return gifts'], ['✨', 'Custom handcrafted pieces'], ['🏠', 'Home & kitchen']].map(([i, t]) => (
+            <div key={t}><span>{i}</span><b>{t}</b></div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

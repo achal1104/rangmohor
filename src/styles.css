@@ -272,3 +272,14 @@ footer .logo-img{height:62px}
 .hero-img .cap{display:none}
 .hero-img{height:420px}
 .card{transition:transform .25s,box-shadow .25s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px #7d1d4222}
+.consult-box {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+}
+
+.mini {
+  width: 100%;
+  max-width: 720px;          /* हवी तशी रुंदी ठेवा */
+  margin: 0 auto;
+}

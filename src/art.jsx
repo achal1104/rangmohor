@@ -104,7 +104,7 @@ const SCENES = {
     {[-40, -20, 0, 20, 40].map((a, i) => <path key={i} d="M0 0 C-16 -20 -12 -62 0 -86 C12 -62 16 -20 0 0Z" fill={['#8fae86', '#a6c09c', '#7c9c73', '#a6c09c', '#8fae86'][i]} transform={`translate(${[130, 150, 170, 244, 268][i] + (i === 2 ? 0 : 0)} 232) rotate(${a})`} opacity=".9" />)}
     <rect x="148" y="132" width="104" height="104" rx="16" fill="#fff" opacity=".55" /><rect x="154" y="152" width="92" height="78" rx="12" fill={g('sage')} />
     <rect x="148" y="132" width="104" height="104" rx="16" fill="none" stroke="#fff" strokeWidth="3" opacity=".9" />
-    <rect x="168" y="182" width="64" height="34" rx="4" fill="#fffaf2" /><text x="200" y="198" textAnchor="middle" fontFamily="Georgia,serif" fontSize="7.5" fill="#7d1d42" letterSpacing=".8">RANGMOHOR</text><text x="200" y="210" textAnchor="middle" fontFamily="Georgia,serif" fontSize="5.5" fill="#d94573" letterSpacing=".6">CITRUS · SAGE</text>
+    <rect x="168" y="182" width="64" height="34" rx="4" fill="#fffaf2" /><text x="200" y="198" textAnchor="middle" fontFamily="Georgia,serif" fontSize="7.5" fill="#7d1d42" letterSpacing=".8">Rang Mohor</text><text x="200" y="210" textAnchor="middle" fontFamily="Georgia,serif" fontSize="5.5" fill="#d94573" letterSpacing=".6">CITRUS · SAGE</text>
     <rect x="198" y="136" width="4" height="18" rx="2" fill="#4a3a2a" /><Flame x="200" y="140" s="1.5" />
     <rect x="150" y="126" width="100" height="10" rx="4" fill={g('gold')} />
   </>),

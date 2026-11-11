@@ -3,7 +3,7 @@
 // Your own photos in public/images/ always win over these (see public/images/README.txt).
 const img = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=80`
 
-export const GIFT_BOXES = img('1764650909534-ebe7b1206466')    // gift boxes with gold ribbon
+export const HERO = 'images/hero'     // gift boxes with gold ribbon
 export const NUTS_BOWL = img('1642337241968-48094a7709ea')     // bowl of almonds
 export const CASHEWS = img('1579282940319-c483172dd0f2')       // cashew nuts
 export const BRASS_HOLDER = img('1761295908436-89f850764209')  // decorative brass candle holder / diya
@@ -23,4 +23,3 @@ export const RETURN_GIFT_SETTING = img('1768776182974-312627c06945') // table se
 export const RETURN_GIFT_JARS = img('1780586377700-632ff2c5c111')    // small jars with lace ribbons
 export const RETURN_GIFT_DESSERT = img('1780586382169-995de14645df') // white desserts with bows on tiered stand
 
-export const HERO = GIFT_BOXES

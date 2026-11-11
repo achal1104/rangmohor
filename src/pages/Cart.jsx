@@ -9,7 +9,7 @@ export default function Cart() {
 
   const orderText = () => {
     const lines = items.map(i => `• ${i.n} x ${i.qty} = ${inr(i.price * i.qty)}`)
-    return `Hello RangMohor, I would like to order:\n${lines.join('\n')}\n\nTotal: ${inr(total)}`
+    return `Hello rang mohor, I would like to order:\n${lines.join('\n')}\n\nTotal: ${inr(total)}`
   }
 
   return (

@@ -11,11 +11,11 @@ const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=
 
 // ---------- Store details (admin → Settings overrides these when filled in) ----------
 export const STORE = {
-  address: 'Add your store address here',
+  address: 'Rang Mohor, Trilok House, 61 Shukrawar Peth, Raja Ram Mohan Roy Marg, Satara -415002',
   phone: '75883 78883',
   phoneHref: 'tel:+917588378883',
   whatsapp: 'https://wa.me/917588378883',
-  email: 'Rangmohor25@gmail.com',
+  email: 'rangmohor25@gmail.com',
 }
 const DEFAULT_STORE = { ...STORE }
 
@@ -105,7 +105,7 @@ export async function loadCatalog() {
     }
     return true
   } catch (err) {
-    console.warn('RangMohor: could not load products from the server', err)
+    console.warn('Rang Mohor: could not load products from the server', err)
     return false
   }
 }
