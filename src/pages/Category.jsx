@@ -1,6 +1,6 @@
 import { Link } from '../router.jsx'
 import { CATEGORIES, catBySlug, productsFor } from '../data.js'
-import { PageHead, ProductGrid, Studio, ExploreBanner } from '../components.jsx'
+import { PageHead, ProductGrid, ExploreBanner } from '../components.jsx'
 import NotFound from './NotFound.jsx'
 
 export default function Category({ slug }) {
@@ -13,7 +13,6 @@ export default function Category({ slug }) {
         <div className="tabs">{CATEGORIES.map(c => <Link key={c.slug} to={'/shop/' + c.slug} className={c.slug === slug ? 'tab on' : 'tab'}>{c.title}</Link>)}</div>
       </section>
       <section className="coll"><ProductGrid items={productsFor(slug)} /></section>
-      {slug === 'gifting' && <Studio />}
       <ExploreBanner />
     </>
   )
